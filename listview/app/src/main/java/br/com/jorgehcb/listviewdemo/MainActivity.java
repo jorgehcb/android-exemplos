@@ -24,11 +24,19 @@ public class MainActivity extends AppCompatActivity {
         // Create a ArrayAdapter and populate a List of planet names.
         String[] planets = new String[] { "Mercury", "Venus", "Earth", "Mars",
                 "Jupiter", "Saturn", "Uranus", "Neptune"};
-        ArrayList<String> planetList = new ArrayList<String>();
+        ArrayList<String> planetList = new ArrayList<>();
         planetList.addAll( Arrays.asList(planets) );
 
         // Create ArrayAdapter using the planet list.
-        listAdapter = new ArrayAdapter<String>(this, R.layout.item_row, planetList);
+
+        // (usando este construtor, o R.layout.item_row deve conter unicamente o textview no item_row.xml)
+        //listAdapter = new ArrayAdapter<>(this, R.layout.item_row, planetList);
+
+        // (usando este segundo construtor, o R.layout.item_row2 pode conter layouts mais complexo)
+        //listAdapter = new ArrayAdapter<>(this, R.layout.item_row2, R.id.textViewID, planetList);
+
+        // (usando simple_list_item_1)
+        listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, planetList);
 
         // Add more planets. If you passed a String[] instead of a List<String>
         // into the ArrayAdapter constructor, you must not add more items.
