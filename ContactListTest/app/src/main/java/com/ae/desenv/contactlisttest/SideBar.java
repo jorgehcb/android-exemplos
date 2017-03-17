@@ -17,7 +17,7 @@ public class SideBar extends View {
     private char[] l;
     private SectionIndexer sectionIndexter = null;
     private ListView list;
-    private final int m_nItemHeight = 29;
+    private final int m_nItemHeight = 35;
     public SideBar(Context context) {
         super(context);
         init();
@@ -29,7 +29,7 @@ public class SideBar extends View {
     private void init() {
         l = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
                 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-        setBackgroundColor(0x44FFFFFF);
+        setBackgroundColor(0xFF404040);
     }
     public SideBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -62,7 +62,7 @@ public class SideBar extends View {
     }
     protected void onDraw(Canvas canvas) {
         Paint paint = new Paint();
-        paint.setColor(0xFFA6A9AA);
+        paint.setColor(0xFF1DABFC);
         paint.setTextSize(20);
         paint.setTextAlign(Paint.Align.CENTER);
         float widthCenter = getMeasuredWidth() / 2;

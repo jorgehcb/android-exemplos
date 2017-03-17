@@ -55,8 +55,8 @@ public class ListAdapter extends BaseAdapter implements SectionIndexer {
     }
     private void setSection(LinearLayout header, String label) {
         TextView text = new TextView(context);
-        header.setBackgroundColor(0xffaabbcc);
-        text.setTextColor(Color.WHITE);
+        header.setBackgroundColor(0xff000000);
+        text.setTextColor(0xFF1DABFC);
         text.setText(label.substring(0, 1).toUpperCase());
         text.setTextSize(20);
         text.setPadding(5, 0, 0, 0);
