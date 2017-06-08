@@ -1,3 +1,4 @@
 # android-exemplos
-Android exemplos
-básicos
+Android exemplos básicos
+
+### Basic exemplos
